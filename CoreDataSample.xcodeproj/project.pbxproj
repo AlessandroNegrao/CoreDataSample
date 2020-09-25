@@ -16,6 +16,7 @@
 		D65E7FED251D37B3004D65DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D65E7FEB251D37B3004D65DA /* LaunchScreen.storyboard */; };
 		D65E7FF8251D37B3004D65DA /* CoreDataSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E7FF7251D37B3004D65DA /* CoreDataSampleTests.swift */; };
 		D65E8003251D37B3004D65DA /* CoreDataSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E8002251D37B3004D65DA /* CoreDataSampleUITests.swift */; };
+		D65E801B251D8538004D65DA /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E801A251D8538004D65DA /* Cell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D65E7FFE251D37B3004D65DA /* CoreDataSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D65E8002251D37B3004D65DA /* CoreDataSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSampleUITests.swift; sourceTree = "<group>"; };
 		D65E8004251D37B3004D65DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D65E801A251D8538004D65DA /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D65E7FEB251D37B3004D65DA /* LaunchScreen.storyboard */,
 				D65E7FEE251D37B3004D65DA /* Info.plist */,
 				D65E7FE6251D37B0004D65DA /* CoreDataSample.xcdatamodeld */,
+				D65E801A251D8538004D65DA /* Cell.swift */,
 			);
 			path = CoreDataSample;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				D65E7FE8251D37B0004D65DA /* CoreDataSample.xcdatamodeld in Sources */,
 				D65E7FE2251D37B0004D65DA /* ViewController.swift in Sources */,
+				D65E801B251D8538004D65DA /* Cell.swift in Sources */,
 				D65E7FDE251D37B0004D65DA /* AppDelegate.swift in Sources */,
 				D65E7FE0251D37B0004D65DA /* SceneDelegate.swift in Sources */,
 			);
