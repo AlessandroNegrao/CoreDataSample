@@ -58,14 +58,45 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="r5P-G8-eFb"/>
+                    <navigationItem key="navigationItem" id="r5P-G8-eFb">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="uDU-Z0-wYt">
+                            <connections>
+                                <segue destination="P5w-H6-wgW" kind="show" id="zbi-qS-ppc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonAction" destination="acp-q5-2Ke" id="6K3-Ee-6rT"/>
+                        <outlet property="tableViewSafada" destination="m2N-UP-77p" id="rG4-eB-n5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="130.58035714285714"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ln9-MV-YwL">
+            <objects>
+                <viewController id="P5w-H6-wgW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfF-x6-BF3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-F3-xen">
+                                <rect key="frame" x="0.0" y="77" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kTs-VH-vwj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="raQ-7k-lzP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5kt-Vc-uh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1783" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="G6l-nr-lZe">

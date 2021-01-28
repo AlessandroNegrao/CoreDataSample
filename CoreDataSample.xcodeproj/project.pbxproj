@@ -17,6 +17,7 @@
 		D65E7FF8251D37B3004D65DA /* CoreDataSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E7FF7251D37B3004D65DA /* CoreDataSampleTests.swift */; };
 		D65E8003251D37B3004D65DA /* CoreDataSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E8002251D37B3004D65DA /* CoreDataSampleUITests.swift */; };
 		D65E801B251D8538004D65DA /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E801A251D8538004D65DA /* Cell.swift */; };
+		D68D9B2025C3137B00902B08 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68D9B1F25C3137B00902B08 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		D65E8002251D37B3004D65DA /* CoreDataSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSampleUITests.swift; sourceTree = "<group>"; };
 		D65E8004251D37B3004D65DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D65E801A251D8538004D65DA /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		D68D9B1A25C3136900902B08 /* CoreDataSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreDataSample.entitlements; sourceTree = "<group>"; };
+		D68D9B1F25C3137B00902B08 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68D9B2025C3137B00902B08 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +91,7 @@
 				D65E7FF6251D37B3004D65DA /* CoreDataSampleTests */,
 				D65E8001251D37B3004D65DA /* CoreDataSampleUITests */,
 				D65E7FDB251D37B0004D65DA /* Products */,
+				D68D9B1E25C3137B00902B08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +108,7 @@
 		D65E7FDC251D37B0004D65DA /* CoreDataSample */ = {
 			isa = PBXGroup;
 			children = (
+				D68D9B1A25C3136900902B08 /* CoreDataSample.entitlements */,
 				D65E7FDD251D37B0004D65DA /* AppDelegate.swift */,
 				D65E7FDF251D37B0004D65DA /* SceneDelegate.swift */,
 				D65E7FE1251D37B0004D65DA /* ViewController.swift */,
@@ -132,6 +138,14 @@
 				D65E8004251D37B3004D65DA /* Info.plist */,
 			);
 			path = CoreDataSampleUITests;
+			sourceTree = "<group>";
+		};
+		D68D9B1E25C3137B00902B08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D68D9B1F25C3137B00902B08 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoreDataSample/CoreDataSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 229HP4B3PQ;
 				INFOPLIST_FILE = CoreDataSample/Info.plist;
@@ -463,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CoreDataSample/CoreDataSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 229HP4B3PQ;
 				INFOPLIST_FILE = CoreDataSample/Info.plist;

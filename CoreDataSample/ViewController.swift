@@ -7,10 +7,13 @@
 
 import UIKit
 import CoreData
+import CloudKit
 
 var database: [NSManagedObject] = []
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableViewSafada: UITableView!
     @IBOutlet weak var buttonAction: UIButton!
 
     @IBAction func buttonActionTrue(_ sender: UIButton) {
@@ -26,6 +29,7 @@ class ViewController: UIViewController {
             NSLog("The \"save\" alert occured.")
             let textField = alert.textFields?.first
             save(nome:  (textField?.text)!)
+            self.tableViewSafada.reloadData()
         }))
         
 
@@ -40,11 +44,12 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let manage = appDelegate.persistentContainer.viewContext
+        
         let fetch = NSFetchRequest<NSManagedObject>(entityName: "Brinquedo")
         
         do {
             database = try manage.fetch(fetch)
-            for brinquedo in database{
+            for brinquedo    in database{
                 print("Registro: ", brinquedo.value(forKey: "nome") as! String)
             }
           } catch {
@@ -56,6 +61,7 @@ class ViewController: UIViewController {
 func save(nome: String){
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     let manage = appDelegate.persistentContainer.viewContext
+    
     let entityBrinquedo = NSEntityDescription.entity(forEntityName: "Brinquedo", in: manage)!
     let brinquedo = NSManagedObject(entity: entityBrinquedo, insertInto: manage)
     brinquedo.setValue(nome, forKey: "nome")
@@ -74,7 +80,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
-        cell?.textLabel?.text = database[indexPath.row].value(forKey: "nome") as? String
+            cell?.textLabel?.text = database[indexPath.row].value(forKey: "nome") as? String
         print("DATABASE: ", database[indexPath.row].value(forKey: "nome") as! String)
 
         return cell!
