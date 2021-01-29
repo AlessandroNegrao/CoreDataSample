@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentCloudKitContainer(name: "CoreDataSample")
+        
         guard let description = container.persistentStoreDescriptions.first else {
             fatalError("Error")
         }
