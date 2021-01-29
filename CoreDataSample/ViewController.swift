@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         generator.prepare()
         generator.notificationOccurred(.success)
         
-        let alert = UIAlertController(title: "Alerta de Brinquedo!", message: "Hi Lorena", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Create Register", message: "Insert new toy", preferredStyle: .alert)
         alert.addTextField()
         alert.addAction(UIAlertAction(title: NSLocalizedString("Save", comment: "Default action"), style: .default, handler: { _ in
             NSLog("The \"save\" alert occured.")
